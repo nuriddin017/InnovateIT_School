@@ -1,8 +1,8 @@
 from telegram.ext import ApplicationBuilder, CommandHandler
-from dotenv import load_dotenv
 import os
 from handlers import start, status, pay, unpay, add, list_unpaid, export_csv
 
+from dotenv import load_dotenv
 load_dotenv()
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 
@@ -22,3 +22,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
