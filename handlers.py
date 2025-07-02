@@ -2,7 +2,7 @@
 
 from telegram import Update
 from telegram.ext import CallbackContext
-from config import ADMIN_IDS, payments
+from config import ADMIN_IDS,  ADMIN_USERNAMES, payments
 from datetime import datetime
 from utils import is_admin, format_payment_status
 

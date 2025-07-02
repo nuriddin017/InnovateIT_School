@@ -5,8 +5,7 @@ from dotenv import load_dotenv
 import os
 from handlers import (
     start, status, pay, unpay,
-    add, list_unpaid, export_csv,
-    statistika
+    add, list_unpaid, export_csv
 )
 
 # .env fayldan tokenni yuklaymiz
@@ -28,7 +27,6 @@ def main():
     dp.add_handler(CommandHandler("add", add))
     dp.add_handler(CommandHandler("list", list_unpaid))
     dp.add_handler(CommandHandler("export", export_csv))
-    dp.add_handler(CommandHandler("statistika", statistika))
 
     # Xatoliklar uchun handler
     dp.add_error_handler(error_handler)
