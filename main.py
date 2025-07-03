@@ -21,6 +21,12 @@ def health_check():
 
 def run_bot():
     """Telegram botni alohida thread da ishga tushirish"""
+    import asyncio
+    
+    # Yangi event loop yaratish
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    
     telegram_app = ApplicationBuilder().token(BOT_TOKEN).build()
     
     # Handlerlarni qo'shish
